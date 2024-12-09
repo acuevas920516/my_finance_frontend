@@ -13,7 +13,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run build
+RUN yarn dev
 
 # Production stage
 FROM nginx:1.13.12-alpine as production-stage
